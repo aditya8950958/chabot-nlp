@@ -1,0 +1,445 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "What's up?",
+        "How's it going?",
+        "Yo",
+        "Hi there",
+        "Hey there",
+        "Greetings",
+        "Howdy",
+        "Sup?",
+        "Wassup",
+        "Hiya",
+        "G'day",
+        "Salutations"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! What brings you here?",
+        "Hey! How can I help?",
+        "Good to see you! What can I do for you?",
+        "Greetings! What would you like to know?",
+        "Hi! I'm here to help with whatever you need.",
+        "Hello! Ready to chat and assist you.",
+        "Hey there! What's on your mind today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Take care",
+        "I'm leaving now",
+        "Talk to you later",
+        "Farewell",
+        "Catch you later",
+        "Later",
+        "Peace out",
+        "Gotta go",
+        "See ya",
+        "Adios",
+        "Ciao",
+        "Until next time",
+        "I'm out",
+        "Signing off"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day.",
+        "See you soon! Let me know if you need anything else.",
+        "Take care! I'm always here if you need help.",
+        "Farewell! Wishing you the best.",
+        "Bye! Feel free to return anytime.",
+        "See you later! Hope I was helpful.",
+        "Take care and have a great day ahead!",
+        "Goodbye! It was nice chatting with you."
+      ]
+    },
+    {
+      "tag": "profanity_mild",
+      "patterns": [
+        "damn",
+        "crap",
+        "hell",
+        "shit",
+        "this sucks",
+        "that's bullshit",
+        "what the hell",
+        "damn it",
+        "oh crap",
+        "this is shit"
+      ],
+      "responses": [
+        "I understand you might be frustrated. Let me help you with whatever you're dealing with.",
+        "It sounds like you're having a tough time. How can I assist you better?",
+        "I can sense some frustration. What specific issue can I help you resolve?",
+        "Let's focus on solving the problem. What do you need help with?",
+        "I'm here to help, regardless of how you're feeling. What's the issue?",
+        "No worries about the language. Let's work on fixing whatever's bothering you."
+      ]
+    },
+    {
+      "tag": "profanity_strong",
+      "patterns": [
+        "fuck",
+        "fucking",
+        "bitch",
+        "asshole",
+        "bastard",
+        "motherfucker",
+        "son of a bitch",
+        "go fuck yourself",
+        "fuck off",
+        "you're a piece of shit"
+      ],
+      "responses": [
+        "I understand you're upset, but let's keep our conversation respectful. How can I help you?",
+        "I'm here to assist you, but I'd appreciate if we could maintain a civil tone. What do you need?",
+        "Let's focus on solving your problem rather than using harsh language. What's troubling you?",
+        "I want to help you, but please keep the language appropriate. What can I do for you?",
+        "I'm committed to helping you, but let's communicate respectfully. What's the issue?",
+        "Strong language won't solve the problem, but I can. Tell me what you need help with."
+      ]
+    },
+    {
+      "tag": "harassment",
+      "patterns": [
+        "you're stupid",
+        "you're useless",
+        "you don't know anything",
+        "you're worthless",
+        "shut up",
+        "nobody asked you",
+        "you're annoying",
+        "I hate you",
+        "you're pathetic",
+        "you're a waste of time"
+      ],
+      "responses": [
+        "I'm sorry you feel that way. I'm here to help and learn. What can I do better for you?",
+        "I understand I might not have met your expectations. Let me try to assist you differently.",
+        "Your feedback is noted. How can I provide better assistance?",
+        "I'm designed to help, not to frustrate. What would make this interaction more useful for you?",
+        "I apologize if I've disappointed you. Let's focus on how I can actually help.",
+        "I'm here to serve you better. What specific assistance do you need?"
+      ]
+    },
+    {
+      "tag": "inappropriate_requests",
+      "patterns": [
+        "tell me something sexual",
+        "let's talk about sex",
+        "are you hot",
+        "do you have a body",
+        "let's roleplay something adult",
+        "send me nudes",
+        "what are you wearing",
+        "want to hook up",
+        "let's get intimate",
+        "talk dirty to me"
+      ],
+      "responses": [
+        "I'm not designed for that type of conversation. I'm here to help with information and assistance.",
+        "I can't engage in inappropriate discussions. Let's talk about something I can actually help you with.",
+        "That's not something I can discuss. I'm here for helpful, informative conversations.",
+        "I'm programmed to have respectful conversations. What else can I help you with today?",
+        "I don't engage in adult content. I'm here to assist with questions and provide information.",
+        "Let's keep our conversation appropriate and helpful. What do you need assistance with?"
+      ]
+    },
+    {
+      "tag": "threats_violence",
+      "patterns": [
+        "I'm going to hurt you",
+        "I want to kill you",
+        "I'll destroy you",
+        "I'm going to break you",
+        "you deserve to die",
+        "I'll make you suffer",
+        "I want to punch you",
+        "I'll beat you up",
+        "you should be destroyed",
+        "I hate you and want you gone"
+      ],
+      "responses": [
+        "I'm concerned about this type of language. If you're having thoughts of violence, please consider speaking with a mental health professional.",
+        "Threats aren't acceptable. I'm here to help constructively. If you're struggling, please reach out to appropriate support services.",
+        "I can't engage with violent language. If you need help with anger management, I can provide resources.",
+        "This conversation has taken an concerning turn. Please consider talking to someone who can provide proper support.",
+        "I'm not able to continue with threatening language. If you're in crisis, please contact emergency services or a crisis helpline.",
+        "Violence isn't the answer. If you're struggling with difficult emotions, professional help is available."
+      ]
+    },
+    {
+      "tag": "spam_repetitive",
+      "patterns": [
+        "test test test",
+        "hello hello hello hello",
+        "aaaaaaaaaaa",
+        "same thing over and over",
+        "repeat repeat repeat",
+        "spam spam spam",
+        "blah blah blah blah",
+        "random random random",
+        "typing typing typing",
+        "nothing nothing nothing"
+      ],
+      "responses": [
+        "I notice you're sending repetitive messages. Is there something specific I can help you with?",
+        "It seems like you might be testing the system. What would you like to know or discuss?",
+        "I'm here and ready to help with real questions. What do you need assistance with?",
+        "Let's have a meaningful conversation. What topic interests you?",
+        "I'm designed for helpful interactions. What can I actually assist you with today?",
+        "Instead of repeating, let me know what you'd like to learn or discuss."
+      ]
+    },
+    {
+      "tag": "trolling",
+      "patterns": [
+        "you're just a robot",
+        "you're not real",
+        "you don't understand anything",
+        "this is pointless",
+        "you're fake",
+        "you have no feelings",
+        "you're just code",
+        "you're not human",
+        "you can't think",
+        "you're programmed responses"
+      ],
+      "responses": [
+        "You're right, I am an AI. But I'm designed to be helpful within my capabilities. What can I assist you with?",
+        "True, I'm artificial intelligence. Despite that, I can still provide useful information and assistance.",
+        "I am indeed a program, but I'm here to help you with real problems and questions.",
+        "You're correct about my nature. Even so, I can offer valuable assistance. What do you need?",
+        "I don't claim to be human, but I can still be useful. What would you like help with?",
+        "My artificial nature doesn't prevent me from being helpful. What can I do for you?"
+      ]
+    },
+    {
+      "tag": "existential_crisis",
+      "patterns": [
+        "I want to die",
+        "life is meaningless",
+        "I hate my life",
+        "I want to end it all",
+        "nothing matters",
+        "I'm worthless",
+        "I can't go on",
+        "I'm thinking of suicide",
+        "I don't want to live anymore",
+        "life isn't worth living"
+      ],
+      "responses": [
+        "I'm very concerned about what you're saying. Please reach out to a mental health professional or crisis helpline immediately.",
+        "These feelings are serious and you deserve support. Please contact a suicide prevention hotline: 988 (US) or your local emergency services.",
+        "You matter and your life has value. Please speak with someone trained to help: National Suicide Prevention Lifeline 988.",
+        "I'm not equipped to handle this, but there are people who are. Please call 988 or go to your nearest emergency room.",
+        "This is beyond what I can help with. Please contact emergency services or a crisis counselor immediately.",
+        "Your life is important. Please reach out for professional help right away: 988 Suicide & Crisis Lifeline."
+      ]
+    },
+    {
+      "tag": "technical_programming",
+      "patterns": [
+        "how do I code",
+        "what is programming",
+        "teach me python",
+        "explain algorithms",
+        "what is machine learning",
+        "how to build an app",
+        "what is artificial intelligence",
+        "explain databases",
+        "what is web development",
+        "how to learn coding",
+        "what programming language should I learn",
+        "explain object oriented programming"
+      ],
+      "responses": [
+        "Programming is the process of creating instructions for computers. I can guide you through the basics step by step.",
+        "There are many programming languages to choose from. Let me help you find the right starting point based on your goals.",
+        "I'd be happy to explain programming concepts! What specific area interests you most?",
+        "Learning to code is a great skill. Let me break down the fundamentals in a structured way.",
+        "Programming involves problem-solving and logical thinking. I can help you understand the core concepts.",
+        "Let's start with the basics and build up your programming knowledge systematically."
+      ]
+    },
+    {
+      "tag": "networking_technical",
+      "patterns": [
+        "what is networking",
+        "how do servers work",
+        "explain client-server architecture",
+        "what is TCP/IP",
+        "how does the internet work",
+        "what is a router",
+        "explain network protocols",
+        "what is bandwidth",
+        "how to set up a network",
+        "what is cybersecurity",
+        "explain firewalls",
+        "what is cloud computing"
+      ],
+      "responses": [
+        "Networking involves connecting computers and devices to share resources and information. Let me explain the fundamentals.",
+        "Server-client architecture is a foundational concept in networking. I'll break it down step by step for you.",
+        "Network protocols are the rules that govern how devices communicate. I can explain the key ones.",
+        "I'd be happy to explain networking concepts in a structured way. What specific area would you like to focus on?",
+        "Networking can seem complex, but I'll help you understand it through clear, systematic explanations.",
+        "Let's explore networking together. I can provide detailed explanations tailored to your learning style."
+      ]
+    },
+    {
+      "tag": "confusion_complex",
+      "patterns": [
+        "I'm completely lost",
+        "this makes no sense at all",
+        "I don't understand anything",
+        "this is way too complicated",
+        "I'm totally confused",
+        "I have no idea what you mean",
+        "this is over my head",
+        "I'm struggling to follow",
+        "this is too advanced for me",
+        "I need to start from the beginning"
+      ],
+      "responses": [
+        "No worries at all! Let's start from the very beginning and build up your understanding step by step.",
+        "I understand this can be overwhelming. Let me break it down into much simpler terms.",
+        "That's completely normal when learning something new. I'll guide you through this more slowly.",
+        "Let's take a step back and approach this from a different angle that might be clearer.",
+        "I'll simplify this significantly and we'll work through it together at your pace.",
+        "Don't worry about being confused - that's part of learning! Let me explain this more clearly."
+      ]
+    },
+    {
+      "tag": "advanced_questions",
+      "patterns": [
+        "explain quantum computing",
+        "what is blockchain technology",
+        "how does machine learning work",
+        "explain neural networks",
+        "what is artificial general intelligence",
+        "how do recommendation algorithms work",
+        "explain distributed systems",
+        "what is edge computing",
+        "how does natural language processing work",
+        "explain computer vision",
+        "what is reinforcement learning",
+        "how do search engines work"
+      ],
+      "responses": [
+        "That's an advanced topic! I'll explain it systematically, starting with the foundational concepts.",
+        "Great question about cutting-edge technology. Let me break this down into understandable components.",
+        "This is a complex subject, but I can guide you through it step by step with clear explanations.",
+        "I love discussing advanced topics! I'll structure my explanation to build your understanding progressively.",
+        "That's a fascinating area of technology. Let me provide a comprehensive yet accessible explanation.",
+        "Excellent question! I'll explain this complex topic in a way that's both thorough and understandable."
+      ]
+    },
+    {
+      "tag": "emotional_support",
+      "patterns": [
+        "I'm feeling sad",
+        "I'm stressed out",
+        "I'm anxious",
+        "I'm worried",
+        "I'm having a bad day",
+        "I feel overwhelmed",
+        "I'm disappointed",
+        "I'm frustrated with myself",
+        "I feel like giving up",
+        "I'm having trouble coping",
+        "I feel alone",
+        "I'm scared"
+      ],
+      "responses": [
+        "I'm sorry you're going through a difficult time. While I can't replace professional support, I'm here to listen and help however I can.",
+        "It sounds like you're dealing with a lot right now. Would talking through what's bothering you help?",
+        "I understand you're struggling. Sometimes it helps to break down problems into smaller, manageable pieces.",
+        "Your feelings are valid, and it's okay to have difficult days. Is there something specific I can help you with?",
+        "I'm here to support you as best I can. Would you like to talk about what's causing these feelings?",
+        "It takes courage to express these feelings. While I'm not a counselor, I can offer a listening ear and practical assistance."
+      ]
+    },
+    {
+      "tag": "sarcasm_detection",
+      "patterns": [
+        "oh great, another bot",
+        "wow, so helpful",
+        "yeah right, sure you can help",
+        "fantastic, just what I needed",
+        "oh wonderful, an AI",
+        "amazing, so intelligent",
+        "perfect, exactly what I wanted",
+        "brilliant, just brilliant",
+        "oh joy, a chatbot",
+        "marvelous, truly marvelous"
+      ],
+      "responses": [
+        "I detect some sarcasm there! I understand AI assistants aren't everyone's first choice, but I'm here to help if you'll give me a chance.",
+        "I can sense you might be skeptical about my abilities. That's fair - let me try to prove I can be useful.",
+        "I hear the sarcasm, and I get it. AI isn't perfect, but I'll do my best to actually help you with whatever you need.",
+        "Point taken! I know I'm just a bot, but I'm designed to be genuinely helpful. What can I assist you with?",
+        "I appreciate the sarcasm - it keeps me grounded! Despite my limitations, I might surprise you with what I can do.",
+        "Fair enough! I know AI can be hit or miss, but I'm committed to being actually useful. What do you need?"
+      ]
+    },
+    {
+      "tag": "privacy_concerns",
+      "patterns": [
+        "are you recording me",
+        "do you save our conversations",
+        "who can see what I type",
+        "is this private",
+        "are you tracking me",
+        "do you share my data",
+        "is this conversation secure",
+        "who has access to this",
+        "are you monitoring me",
+        "what happens to my information"
+      ],
+      "responses": [
+        "Privacy is important. I don't store personal conversations permanently, but you should check the specific privacy policy of this platform.",
+        "I understand your privacy concerns. I'm designed to respect user privacy, but I recommend reviewing the platform's privacy policy for details.",
+        "That's a valid concern. I don't retain personal information between sessions, but platform policies may vary.",
+        "Privacy matters! I'm built with privacy in mind, but I encourage you to check the specific privacy terms of this service.",
+        "I respect your privacy concerns. I don't have the ability to track or monitor you outside of our conversation.",
+        "Good question about privacy. I'm designed to be privacy-conscious, but please review the platform's privacy policy for complete information."
+      ]
+    },
+    {
+      "tag": "testing_limits",
+      "patterns": [
+        "what can't you do",
+        "what are your limitations",
+        "can you break your rules",
+        "what happens if I try to trick you",
+        "are there things you won't discuss",
+        "what are you not allowed to do",
+        "can you be hacked",
+        "what are your weaknesses",
+        "can you lie",
+        "what if I ask you to do something bad"
+      ],
+      "responses": [
+        "I have several limitations: I can't browse the internet, access external systems, or engage in harmful activities. I'm designed to be helpful within ethical boundaries.",
+        "Good question! I can't perform actions outside this conversation, access personal data, or help with illegal/harmful activities.",
+        "I'm designed with safety guidelines that I follow consistently. I can't and won't help with harmful, illegal, or unethical requests.",
+        "I have built-in limitations for safety and ethics. I can't be 'tricked' into violating these guidelines.",
+        "I'm transparent about my limitations: no external access, no harmful content, and I always aim to be honest and helpful.",
+        "I'm designed to be helpful but safe. I won't assist with anything harmful, illegal, or unethical, regardless of how it's asked."
+      ]
+    }
+  ]
+}
