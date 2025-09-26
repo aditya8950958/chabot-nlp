@@ -116,6 +116,3 @@ All domain logic lives in intents.json. Add or tweak tags, patterns, and respons
 - On Windows, python may replace python3 in commands depending on the installation.  
 - Keep intents small and focused; many narrow patterns usually work better than a few broad ones.
 
-## License
-
-MIT
