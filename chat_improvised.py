@@ -15,7 +15,7 @@ class ExactAnswerChatbot:
         
     def setup_answer_generators(self):
         """Setup exact answer generation based on question analysis"""
-        # Expanded knowledge base with more topics
+        
         self.knowledge_base = {
             "programming": {
                 "python": "Python is a high-level, interpreted programming language known for its simple syntax and versatility.",
@@ -50,15 +50,15 @@ class ExactAnswerChatbot:
 
     def extract_topic_keywords(self, user_input):
         """Extract main topic from user question - FIXED VERSION"""
-        # Remove question words and common words
+       
         stop_words = ["what", "is", "how", "to", "do", "i", "can", "why", "does", 
                      "when", "should", "where", "which", "the", "a", "an", "and", "or", "?"]
         
-        # Clean and split input
+      
         cleaned_input = re.sub(r'[^\w\s]', '', user_input.lower())
         words = cleaned_input.split()
         
-        # Filter out stop words and short words
+        
         keywords = [word for word in words if word not in stop_words and len(word) > 2]
         
         return keywords
@@ -68,14 +68,14 @@ class ExactAnswerChatbot:
         if not keywords:
             return None, None, None
             
-        # Search through knowledge base
+        
         for category, topics in self.knowledge_base.items():
             for topic, answer in topics.items():
-                # Check if any keyword matches the topic
+                
                 for keyword in keywords:
                     if keyword.lower() == topic.lower() or keyword.lower() in topic.lower():
                         return answer, topic, category
-                    # Also check if topic is in keyword (for compound words)
+                   
                     if topic.lower() in keyword.lower():
                         return answer, topic, category
         
@@ -100,12 +100,12 @@ class ExactAnswerChatbot:
 
     def get_exact_response(self, user_input):
         """Generate exact answer based on user question - FIXED VERSION"""
-        # Handle simple greetings first
+       
         simple_greetings = ["hello", "hi", "hey", "good morning", "good afternoon", "good evening"]
         if user_input.lower().strip() in simple_greetings:
             return self.get_base_response("greeting")
         
-        # Handle thanks
+      
         if any(word in user_input.lower() for word in ["thank", "thanks"]):
             return self.get_base_response("thanks")
         
@@ -113,16 +113,16 @@ class ExactAnswerChatbot:
         if any(word in user_input.lower() for word in ["bye", "goodbye", "see you"]):
             return self.get_base_response("goodbye")
         
-        # Analyze question type
+      
         question_type = self.analyze_question_type(user_input)
         
-        # Extract keywords
+       
         keywords = self.extract_topic_keywords(user_input)
         
-        # Find exact answer
+        
         exact_answer, topic, category = self.find_exact_answer(keywords)
         
-        # Generate response based on findings
+       
         if exact_answer:
             if question_type == "definition":
                 return exact_answer
@@ -136,18 +136,18 @@ class ExactAnswerChatbot:
             else:
                 return exact_answer
         else:
-            # Fallback to intent classification for unknown topics
+            
             intent_tag, confidence = self.classify_intent(user_input)
             if confidence > 0.7:
                 return self.get_base_response(intent_tag)
             else:
-                # Better fallback response
+                
                 if keywords:
                     return f"I don't have specific information about '{' '.join(keywords)}' in my knowledge base. Could you ask about a different topic or provide more context?"
                 else:
                     return "I'm not sure what you're asking about. Could you rephrase your question or be more specific?"
 
-    # Include your existing methods
+    
     def load_model(self):
         """Load the trained model and data"""
         try:
