@@ -5,11 +5,11 @@ from googletrans import Translator
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
 
-# Initialize the Translator
+
 translator = Translator()
 
 def translate_to_english(text):
-    detected_lang = translator.detect(text).lang  # Detect the language
+    detected_lang = translator.detect(text).lang  
     if detected_lang != 'en':
         translated_text = translator.translate(text, src=detected_lang, dest='en').text
         return translated_text, detected_lang
@@ -21,7 +21,7 @@ def translate_back(text, target_lang):
         return translated_text
     return text
 
-# Route to render the HTML page
+
 @app.route('/')
 def home():
     return render_template('index.html')
