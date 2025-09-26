@@ -1,7 +1,7 @@
 import nltk
 from nltk.stem.porter import PorterStemmer
 
-# Initialize the stemmer
+
 stemmer = PorterStemmer()
 
 def tokenize(sentence):
